@@ -2,19 +2,23 @@
 
 :root {
     --primary-color: #007AF3;
+    --secondary-color: #F2F2F2;
+    --white: white;
+    --blue: #006BD6;
 }
 
 body {
-    background: #F2F2F2;
+    background: var(--secondary-color);
     margin: 0;
     font-family: 'Poppins';
 }
 
 .navbar {
-    background: white;
+    background:var(--white);
     padding: 1em;
     width: 100%;
-    margin: 0em;
+   
+
     
 
 
@@ -23,6 +27,8 @@ body {
         font-weight: bold;
         color: black;
         font-size: 1.2em;
+       
+       
 
         span {
             color: var(--primary-color);
@@ -36,13 +42,19 @@ body {
     .container {
         display: flex;
         place-content: space-between;
+
+        .secondary-nav {
+            margin-right: 1.1em;
+        }
+
+        
         
     }
 
     .mobile-menu {
         cursor: pointer;
-        float: right;
-        
+        padding-right: 1.1em;
+ 
        
     }
 }
@@ -83,7 +95,7 @@ section {
 
     .primary-cta {
         background: var(--primary-color);
-        color: white;
+        color: var(--white);
         text-decoration: none;
         padding: .6em 1.3em;
         font-size: 1.4em;
@@ -109,7 +121,7 @@ section {
 
 section.features-section {
     background: #20272E;
-    color: white;
+    color: var(--white);
 }
 
 ul.features-list {
@@ -143,10 +155,10 @@ ul.features-list {
 
 .test-section {
     background: var(--primary-color);
-    color: white;
+    color: var(--white);
 
     li {
-        background: #006BD6;
+        background: var(--blue);
         text-align: center;
         padding: 2em 1em;
         width: 80%;
@@ -154,9 +166,9 @@ ul.features-list {
         border-radius: 1em;
 
         img {
-            width: 5em;
-            height: 5em;
-            border: 5px solid #006BD6;
+            width: 6em;
+            height: 6em;
+            border: 5px solid var(--blue);
             border-radius: 50%;
             margin-top: -4.5em;
         }
@@ -185,7 +197,7 @@ input, textarea {
 
 input[type="submit"] {
     background-color: var(--primary-color);
-    color: white;
+    color: var(--white);
     font-weight: bold;
     font-size: 1.3em;
     border: none;
@@ -223,7 +235,7 @@ nav {
     li {
         
         a {
-            color: white;
+            color: var(--white);
             text-decoration: none;
             display: block;
             padding: .25em;
@@ -243,7 +255,7 @@ nav {
     cursor: pointer;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 700px) {
 
     .mobile-menu, .mobile-menu-exit {
         display: none;
@@ -287,10 +299,11 @@ nav {
             font-weight: bold;
             border-radius: 5em;
             margin-top: -.2em;
+            
 
             &:hover {
                 background: var(--primary-color);
-                color: white;
+                color: var(--white);
             }
         }
     }
@@ -361,6 +374,7 @@ nav {
 
     .test-section ul {
         display: flex;
+        
         
         li {
             margin: 0 1em;
